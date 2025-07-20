@@ -1,4 +1,5 @@
-[English version](README.en.md)
+📄 [English version](README.en.md)
+
 # 🧾 EcuapassBot – Automatización inteligente de documentos para ECUAPASS
 
 **EcuapassBot** es una aplicación de escritorio diseñada para **automatizar la creación y transmisión de documentos aduaneros** exigidos por el sistema **ECUAPASS** del Ecuador, especialmente en el contexto del **transporte terrestre internacional de carga**.
@@ -51,11 +52,21 @@ EcuapassBot se licencia por país y empresa. Cada licencia incluye instalación 
 ---
 
 ## LOG
-Jul/19: r0.9874: Added update client settings by application on startup.
+Jul/19: r0.9874: Added configuration update from the application
 
 Jul/18: r0.9873: Improved getTipoEmbalaje, getTipoContainer, cloud creation.
 
 Jul/15: r0.9872: Fixed TRNSCMI carga. Added "preformatCertificate" to MCI (for TSP).
 
 Jul/12: r0.9871: Fixed COREDB Web access (urlPrefix, getDocFields)
+
+Jul/11: r0.9870: Improved Installation GUI (simply, tabs, PO validations). 
+
+Jul/10: r0.9870: Improved getCargaInfo.
+
+Jul/10: r0.9869: Tested new patching model (no commander exe). Improved contenedores extraction.
+
+Jul/10: r0.9868: Removed commander exe from git (created when patched)
+
+Jul/09: r0.9867: EcuBot7 for COREBD::TSP (Without customs, no full test)
 
