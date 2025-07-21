@@ -4,7 +4,8 @@ chcp 850 > nul
 :: Add embedded :mingit to PATH
 set PATH=%~dp0mingit/cmd;%PATH%
 
-cscript //nologo splash.vbs
+start "" wscript.exe "%~dp0splash.vbs"
+
 
 echo ========================================================
 echo +++ Quitando previos Commander y GUI
