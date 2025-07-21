@@ -4,7 +4,7 @@ chcp 850 > nul
 :: Add embedded :mingit to PATH
 set PATH=%~dp0mingit/cmd;%PATH%
 
-start "" wscript.exe "%~dp0splash.vbs"
+splash.vbs
 
 
 echo ========================================================
