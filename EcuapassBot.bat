@@ -6,7 +6,6 @@ set PATH=%~dp0mingit/cmd;%PATH%
 
 splash.vbs
 
-
 echo ========================================================
 echo +++ Quitando previos Commander y GUI
 taskkill /IM "ecuapass_commander.exe" /F 2>nul 
