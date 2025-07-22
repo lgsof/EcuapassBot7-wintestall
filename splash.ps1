@@ -21,7 +21,7 @@ $label.VerticalAlignment   = "Center"
 $window.Content            = $label
 
 # 4. Kick off your batch right away (non‑blocking)
-Start-Process -FilePath ".\start_ecuapassbot.bat"
+Start-Process -FilePath ".\EcuapassBot.bat"
 
 # 5. Create a timer on the UI thread to close after 3 seconds
 $timer = New-Object Windows.Threading.DispatcherTimer
