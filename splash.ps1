@@ -1,3 +1,5 @@
+Set-Location "C:\Users\LuisG\AppData\Local\Programs\EcuapassBot7-wintest"
+
 Add-Type -AssemblyName PresentationFramework
 
 # Create the window
