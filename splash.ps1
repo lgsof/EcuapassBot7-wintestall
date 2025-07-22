@@ -1,24 +1,28 @@
 Add-Type -AssemblyName PresentationFramework
 
-$splash = New-Object Windows.Window
-$splash.Title = "EcuapassBot"
-$splash.Width = 300
-$splash.Height = 100
-$splash.Topmost = $true
-$splash.WindowStartupLocation = "CenterScreen"
-$splash.ResizeMode = "NoResize"
+# Create the window
+$window = New-Object Windows.Window
+$window.Title = "EcuapassBot"
+$window.Width = 300
+$window.Height = 100
+$window.Topmost = $true
+$window.WindowStartupLocation = "CenterScreen"
+$window.ResizeMode = "NoResize"
 
+# Add label
 $label = New-Object Windows.Controls.Label
 $label.Content = "EcuapassBot is starting, please wait..."
 $label.HorizontalAlignment = "Center"
 $label.VerticalAlignment = "Center"
-$splash.Content = $label
+$window.Content = $label
 
+# Start background job to launch your app and close splash after it exits
 Start-Job {
-    Start-Sleep -Seconds 1
-    Start-Process -FilePath "EcuapassBot.bat" -Wait
-    [System.Windows.Application]::Current.Dispatcher.Invoke({ $splash.Close() })
+    Start-Sleep -Milliseconds 500
+    Start-Process -FilePath "C:\Users\LuisG\AppData\Local\Programs\EcuapassBot7-wintest\EcuapassBot.bat" -Wait
+    [System.Windows.Application]::Current.Dispatcher.Invoke({ $window.Close() })
 } | Out-Null
 
-[System.Windows.Threading.Dispatcher]::Run()
+# Show the window and keep it alive
+$null = $window.ShowDialog()
 
