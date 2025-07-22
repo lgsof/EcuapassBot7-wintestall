@@ -31,5 +31,9 @@ $timer.Add_Tick({
     $window.Close()
 })
 
+# Show the splash
 $timer.Start()
-$window.ShowDialog() | Out-Null
+$window.Show()
+
+# Run the dispatcher loop to keep the window responsive
+[System.Windows.Threading.Dispatcher]::Run()
