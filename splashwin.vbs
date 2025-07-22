@@ -16,7 +16,7 @@ splashFile.Close
 shell.Run "mshta.exe """ & splashPath & """", 1, False
 
 ' === Start the batch file (non-blocking) ===
-Set proc = shell.Exec("cmd /c cd /d C:\path\to\EcuapassBot && EcuapassBot.bat")
+Set proc = shell.Exec("cmd /c cd /d C:\Users\LuisG\AppData\Local\Programs\EcuapassBot7-wintest && EcuapassBot.bat")
 
 ' === Wait for it to finish (Java window may take time to show) ===
 Do While proc.Status = 0
