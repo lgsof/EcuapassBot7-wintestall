@@ -1,1 +1,1 @@
-Jul/20: r0.9875: Fixed onTop: Settings Frame instead Dialog. Splash window.
+Jul/21: r0.9875: Codebini Install. Fixed Settings onTop: Frame instead Dialog. Splash window.
