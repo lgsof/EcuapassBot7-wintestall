@@ -6,7 +6,7 @@ Set fso = CreateObject("Scripting.FileSystemObject")
 splashPath = fso.GetSpecialFolder(2) & "\ecuapass_splash.hta"
 
 Set splashFile = fso.CreateTextFile(splashPath, True)
-splashFile.WriteLine "<html><head><title>Starting...</title>"
+splashFile.WriteLine "<html><head><title>EcuapassBot</title>"
 splashFile.WriteLine "<hta:application windowstate='minimize' showintaskbar='yes'></hta:application>"
 splashFile.WriteLine "</head><body style='font-family:sans-serif;text-align:center;padding-top:30px;'>"
 splashFile.WriteLine "<h3>EcuapassBot is starting, please wait...</h3>"
@@ -15,11 +15,11 @@ splashFile.Close
 
 ' Start splash (non-blocking)
 shell.Run "mshta.exe """ & splashPath & """", 1, False
-WScript.Sleep 3000  ' Give it a moment to launch
+WScript.Sleep 6000  ' Give it a moment to launch
 
 ' Try to bring HTA window to front
 On Error Resume Next
-shell.AppActivate "Starting..."  ' Title must match <title> in HTA
+shell.AppActivate "EcuapassBot"  ' Title must match <title> in HTA
 On Error GoTo 0
 
 ' === Start the batch file (non-blocking) ===
