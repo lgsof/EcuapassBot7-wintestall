@@ -18,7 +18,7 @@ WScript.Sleep 300  ' Give it a moment to launch
 
 ' Try to bring HTA window to front
 On Error Resume Next
-shell.AppActivate "EcuapassBot"  ' Title must match <title> in HTA
+shell.AppActivate "Starting..."  ' Title must match <title> in HTA
 On Error GoTo 0
 
 ' === Start the batch file (non-blocking) ===
