@@ -22,8 +22,8 @@ shell.AppActivate "Starting..."  ' Title must match <title> in HTA
 On Error GoTo 0
 
 ' === Start the batch file (non-blocking) ===
-Set proc = shell.Exec("cmd /c cd /d C:\Users\LuisG\AppData\Local\Programs\EcuapassBot7-wintest && EcuapassBot.bat")
-
+' Set proc = shell.Exec("cmd /c cd /d C:\Users\LuisG\AppData\Local\Programs\EcuapassBot7-wintest && EcuapassBot.bat")
+Set proc = ""
 ' === Wait for it to finish (Java window may take time to show) ===
 Do While proc.Status = 0
     WScript.Sleep 500
