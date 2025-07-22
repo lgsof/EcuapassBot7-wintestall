@@ -1,6 +1,8 @@
 @echo off
 chcp 850 > nul
 
+start "" wscript.exe //nologo "%~dp0splash.vbs"
+
 echo === Initial dir: %CD%
 cd /d "%~dp0"
 
