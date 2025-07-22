@@ -14,6 +14,12 @@ splashFile.Close
 
 ' Start splash (non-blocking)
 shell.Run "mshta.exe """ & splashPath & """", 1, False
+WScript.Sleep 300  ' Give it a moment to launch
+
+' Try to bring HTA window to front
+On Error Resume Next
+shell.AppActivate "EcuapassBot"  ' Title must match <title> in HTA
+On Error GoTo 0
 
 ' === Start the batch file (non-blocking) ===
 Set proc = shell.Exec("cmd /c cd /d C:\Users\LuisG\AppData\Local\Programs\EcuapassBot7-wintest && EcuapassBot.bat")
