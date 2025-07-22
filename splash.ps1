@@ -15,7 +15,7 @@ $window.ResizeMode = "NoResize"
 
 # Add message
 $label = New-Object Windows.Controls.Label
-$label.Content = "Iniciando EcuapassBot..."
+$label.Content = "Iniciando EcuapassBot ..."
 $label.HorizontalAlignment = "Center"
 $label.VerticalAlignment = "Center"
 $window.Content = $label
@@ -23,7 +23,7 @@ $window.Content = $label
 # Start background job to launch your app and close splash after it exits
 Start-Job {
     Start-Sleep -Seconds 5
-    Start-Process -FilePath ".\EcuapassBot.bat" -Wait
+    Start-Process -FilePath "C:\Users\LuisG\AppData\Local\Programs\EcuapassBot7-wintest\EcuapassBot.bat" -Wait
     [System.Windows.Application]::Current.Dispatcher.Invoke({ $window.Close() })
 } | Out-Null
 
