@@ -16,7 +16,7 @@ $splash.Content = $label
 
 Start-Job {
     Start-Sleep -Seconds 1
-    Start-Process -FilePath "C:\path\to\EcuapassBot.bat" -Wait
+    Start-Process -FilePath "EcuapassBot.bat" -Wait
     [System.Windows.Application]::Current.Dispatcher.Invoke({ $splash.Close() })
 } | Out-Null
 
