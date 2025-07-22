@@ -14,7 +14,7 @@ splashFile.Close
 
 ' Start splash (non-blocking)
 shell.Run "mshta.exe """ & splashPath & """", 1, False
-WScript.Sleep 300  ' Give it a moment to launch
+WScript.Sleep 3000  ' Give it a moment to launch
 
 ' Try to bring HTA window to front
 On Error Resume Next
