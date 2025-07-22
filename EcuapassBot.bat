@@ -1,6 +1,9 @@
 @echo off
 chcp 850 > nul
 
+echo === Initial dir: %CD%
+cd /d "%~dp0"
+
 :: Add embedded :mingit to PATH
 set PATH=%~dp0mingit/cmd;%PATH%
 
@@ -17,6 +20,7 @@ if %ERRORLEVEL% EQU 0 (
     set "GIT_CMD=%~dp0..\mingit\cmd\git.exe"
 )
 
+echo === current dir: %CD%
 echo ====== Verificando si existe repositorio Git ===================
 if not exist ".git" (
     echo ERROR: Carpeta .git no encontrada. Se omite la actualización.

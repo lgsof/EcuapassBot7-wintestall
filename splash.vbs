@@ -1,6 +1,6 @@
 ' Create splash window
 Set objShell = CreateObject("WScript.Shell")
-Set objFSO = CreateObject("Scripting.FileSystemObject")
+'Set objFSO = CreateObject("Scripting.FileSystemObject")
 
 ' Show splash message
 Set objWshShell = CreateObject("WScript.Shell")
