@@ -15,7 +15,7 @@ $window.ResizeMode = "NoResize"
 
 # Add message
 $label = New-Object Windows.Controls.Label
-$label.Content = "EcuapassBot está iniciando, espere un momento..."
+$label.Content = "Iniciando EcuapassBot, espere un momento..."
 $label.HorizontalAlignment = "Center"
 $label.VerticalAlignment = "Center"
 $window.Content = $label
@@ -23,13 +23,13 @@ $window.Content = $label
 # Launch app without waiting
 Start-Process -FilePath ".\EcuapassBot.bat"
 
-# Start background job to launch your app and close splash after it exits
-Start-Job {
-    Start-Sleep -Seconds 5
-    #Start-Process -FilePath "C:\Users\LuisG\AppData\Local\Programs\EcuapassBot7-wintest\EcuapassBot.bat" -Wait
-    [System.Windows.Application]::Current.Dispatcher.Invoke({ $window.Close() })
-} | Out-Null
+# Setup timer to close splash after 3 seconds
+$timer = New-Object Windows.Threading.DispatcherTimer
+$timer.Interval = [TimeSpan]::FromSeconds(3)
+$timer.Add_Tick({
+    $timer.Stop()
+    $window.Close()
+})
 
-# Show the window and keep it alive
-$null = $window.ShowDialog()
-
+$timer.Start()
+$window.ShowDialog() | Out-Null
