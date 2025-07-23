@@ -4,17 +4,13 @@ chcp 850 > nul
 :: Add embedded :mingit to PATH
 set PATH=%~dp0mingit/cmd;%PATH%
 
-splash.vbs
-
 echo ==== Quitando previos Commander y GUI ==================
 taskkill /IM "ecuapass_commander.exe" /F 2>nul 
 taskkill /FI "WINDOWTITLE eq EcuapassBot" /F
 
 echo ==== Buscando ultima release en git ==================
-@echo off
 setlocal EnableDelayedExpansion
 
-REM Obtener JSON completo en una sola línea
 for /f "delims=" %%L in ('
   curl -s -H "User-Agent: batch" "https://api.github.com/repos/lgsof/EcuapassBot7-win/tags"
 ') do (
@@ -91,6 +87,9 @@ if errorlevel 1 (
 
 echo ====== Parchando Commander =====================================
 call patches\ebotpatch-update-exe-win.bat
+
+echo ====== Actualizando VERSION.txt ================================
+echo !LATEST_TAG! > VERSION.txt
 
 :ejecutar_app
 echo ======= Ejecutando EcuapassBot =================================
