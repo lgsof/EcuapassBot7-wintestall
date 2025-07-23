@@ -89,7 +89,7 @@ echo ====== Parchando Commander =====================================
 call patches\ebotpatch-update-exe-win.bat
 
 echo ====== Actualizando VERSION.txt ================================
-echo !LATEST_TAG! > VERSION.txt
+echo !LATEST_TAG!>VERSION.txt
 
 :ejecutar_app
 echo ======= Ejecutando EcuapassBot =================================
