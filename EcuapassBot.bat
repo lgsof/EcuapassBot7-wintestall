@@ -1,18 +1,59 @@
 @echo off
 chcp 850 > nul
 
-start "" wscript.exe //nologo "%~dp0splash.vbs"
-
-echo === Initial dir: %CD%
-cd /d "%~dp0"
-
 :: Add embedded :mingit to PATH
 set PATH=%~dp0mingit/cmd;%PATH%
 
-echo ========================================================
-echo +++ Quitando previos Commander y GUI
+splash.vbs
+
+echo ==== Quitando previos Commander y GUI ==================
 taskkill /IM "ecuapass_commander.exe" /F 2>nul 
 taskkill /FI "WINDOWTITLE eq EcuapassBot" /F
+
+echo ==== Buscando ultima release en git ==================
+@echo off
+setlocal EnableDelayedExpansion
+
+REM Obtener JSON completo en una sola línea
+for /f "delims=" %%L in ('
+  curl -s -H "User-Agent: batch" "https://api.github.com/repos/lgsof/EcuapassBot7-win/tags"
+') do (
+  set "JSON=%%L"
+  goto :parse
+)
+
+:parse
+REM Buscar el valor entre "name":" y la siguiente comilla
+for %%A in (!JSON!) do (
+  set "PART=%%A"
+  REM Buscar el prefijo "name":" y extraer el siguiente token
+  for /f "tokens=2 delims=:" %%B in ("!PART!") do (
+    set "TMP=%%B" & set "TMP=!TMP:,=!" & set "TMP=!TMP:"=!"
+    set "LATEST_TAG=!TMP!"
+    goto :done
+  )
+)
+:done
+
+echo ==== Leyendo versión local en VERSION.txt ========================
+if not exist VERSION.txt (
+    echo ERROR: Archivo VERSION.txt no encontrado.
+    goto ejecutar_actualizacion
+)
+set /p "LOCAL_TAG=" < VERSION.txt
+
+echo --------------------------------------------------------
+echo Última versión remota : !LATEST_TAG!
+echo Versión instalada     : !LOCAL_TAG!
+echo --------------------------------------------------------
+
+:: === Comparar versiones
+if "!LATEST_TAG!"=="!LOCAL_TAG!" (
+    echo +++ La versión está actualizada.
+    goto ejecutar_app
+)
+
+:ejecutar_actualizacion
 
 echo ====== Verificando disponibilidad de Git =======================
 git --version >nul 2>&1
@@ -22,7 +63,6 @@ if %ERRORLEVEL% EQU 0 (
     set "GIT_CMD=%~dp0..\mingit\cmd\git.exe"
 )
 
-echo === current dir: %CD%
 echo ====== Verificando si existe repositorio Git ===================
 if not exist ".git" (
     echo ERROR: Carpeta .git no encontrada. Se omite la actualización.
