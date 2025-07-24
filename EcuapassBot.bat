@@ -24,8 +24,8 @@ for %%A in (!JSON!) do (
   set "PART=%%A"
   REM Buscar el prefijo "name":" y extraer el siguiente token
   for /f "tokens=2 delims=:" %%B in ("!PART!") do (
-    set "TMP=%%B" & set "TMP=!TMP:,=!" & set "TMP=!TMP:"=!"
-    set "LATEST_TAG=!TMP!"
+    set "TAG_TMP=%%B" & set "TAG_TMP=!TAG_TMP:,=!" & set "TAG_TMP=!TAG_TMP:"=!"
+    set "LATEST_TAG=!TAG_TMP!"
     goto :done
   )
 )
