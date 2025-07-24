@@ -12,7 +12,7 @@ echo ==== Buscando ultima release en git ==================
 setlocal EnableDelayedExpansion
 
 for /f "delims=" %%L in ('
-  curl -s -H "User-Agent: batch" "https://api.github.com/repos/lgsof/EcuapassBot7-win/tags"
+  curl -s -H "User-Agent: batch" "https://api.github.com/repos/lgsof/EcuapassBot7-wintest/tags"
 ') do (
   set "JSON=%%L"
   goto :parse
@@ -71,7 +71,7 @@ git update-index --skip-worktree ecuapass_commander\ecuapass_commander.exe
 
 echo ====== Buscando actualizaciones ================================
 git fetch origin main
-if errorlevel 1 (
+if %ERRORLEVEL% 1 (
     echo ADVERTENCIA: Falló git fetch. Se omite la actualización.
     goto ejecutar_app
 )
@@ -81,7 +81,7 @@ git --no-pager diff --name-status HEAD origin/main
 
 echo ====== Aplicando actualizaciones ===============================
 git reset --hard origin/main
-if errorlevel 1 (
+if %ERRORLEVEL% 1 (
     echo ADVERTENCIA: Falló git reset. Continuando con los archivos actuales.
 )
 
