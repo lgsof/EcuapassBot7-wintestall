@@ -2,12 +2,11 @@
 chcp 850 > nul
 
 echo ====== Verificando disponibilidad de Git =======================
-git --version >nul 2>&1
+where git >nul 2>null
 if %ERRORLEVEL% EQU 0 (
     echo +++ Git esta preinstalado
 ) else (
-    echo +++ Git se toma de mingit
-    set PATH=%~dp0..\mingit\cmd;%PATH%  :: Add embedded :mingit to PATH
+    set "PATH=%~dp0..\mingit\cmd;%PATH%"
 )
 
 echo ==== Quitando previos Commander y GUI ==================

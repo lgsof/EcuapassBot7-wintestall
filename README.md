@@ -52,7 +52,7 @@ EcuapassBot se licencia por país y empresa. Cada licencia incluye instalación 
 ---
 
 ## LOG
-Jul/29: v.7.0.3.8: Improved createClient (added BTST, but not working yet)
+Jul/29: v.7.0.3.8: Improved Installer (WApp). Improved createClient: added BTST but not working yet.
 
 Jul/28: v.7.0.3.7: Improved getSubjectInfo. Moved GUI buttons
 
