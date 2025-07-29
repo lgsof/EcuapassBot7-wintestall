@@ -1,8 +1,14 @@
 @echo off
 chcp 850 > nul
 
-:: Add embedded :mingit to PATH
-set PATH=%~dp0../mingit/cmd;%PATH%
+echo ====== Verificando disponibilidad de Git =======================
+git --version >nul 2>&1
+if %ERRORLEVEL% EQU 0 (
+    echo +++ Git esta preinstalado
+) else (
+    echo +++ Git se toma de mingit
+    set PATH=%~dp0../mingit/cmd;%PATH%  :: Add embedded :mingit to PATH
+)
 
 echo ==== Quitando previos Commander y GUI ==================
 taskkill /IM "ecuapass_commander.exe" /F 2>nul 
@@ -27,7 +33,7 @@ for %%A in (!JSON!) do (
     set "TAG_TMP=%%B" & set "TAG_TMP=!TAG_TMP:,=!" & set "TAG_TMP=!TAG_TMP:"=!"
     set "LATEST_TAG=!TAG_TMP!"
     goto :done
-  )
+        )
 )
 :done
 
@@ -50,14 +56,6 @@ if "!LATEST_TAG!"=="!LOCAL_TAG!" (
 )
 
 :ejecutar_actualizacion
-
-::echo ====== Verificando disponibilidad de Git =======================
-::git --version >nul 2>&1
-::if %ERRORLEVEL% EQU 0 (
-::    set "GIT_CMD=git"
-::) else (
-::    set "GIT_CMD=%~dp0..\mingit\cmd\git.exe"
-::)
 
 echo ====== Verificando si existe repositorio Git ===================
 if not exist ".git" (
