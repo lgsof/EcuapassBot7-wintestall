@@ -7,7 +7,7 @@ if %ERRORLEVEL% EQU 0 (
     echo +++ Git esta preinstalado
 ) else (
     echo +++ Git se toma de mingit
-    set PATH=%~dp0../mingit/cmd;%PATH%  :: Add embedded :mingit to PATH
+    set PATH=%~dp0..\mingit\cmd;%PATH%  :: Add embedded :mingit to PATH
 )
 
 echo ==== Quitando previos Commander y GUI ==================
