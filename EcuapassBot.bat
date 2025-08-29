@@ -1,4 +1,5 @@
 @echo off
+setlocal EnableDelayedExpansion
 chcp 850 > nul
 
 echo ====== Verificando disponibilidad de Git =======================
@@ -13,28 +14,19 @@ echo ==== Quitando previos Commander y GUI ==================
 taskkill /IM "ecuapass_commander.exe" /F 2>nul 
 taskkill /FI "WINDOWTITLE eq EcuapassBot" /F
 
-echo ==== Buscando release en git ==================
-setlocal EnableDelayedExpansion
 
-for /f "delims=" %%L in ('
-  curl -s -H "User-Agent: batch" "https://api.github.com/repos/lgsof/EcuapassBot7-wintest/tags"
-') do (
-  set "JSON=%%L"
-  goto :parse
+echo ==== Obteniendo Ultimo release en GitHub ==================
+for /f %%A in ('
+  powershell -NoProfile -Command ^
+    "(Invoke-RestMethod -Headers @{\"User-Agent\"=\"batch\"} -Uri https://api.github.com/repos/lgsof/EcuapassBot7-wintest/releases/latest).tag_name"
+') do set "LATEST_TAG=%%A"
+
+if not defined LATEST_TAG (
+  echo ERROR: No se pudo obtener el último tag desde GitHub.
+  goto :end
 )
 
-:parse
-REM Buscar el valor entre "name":" y la siguiente comilla
-for %%A in (!JSON!) do (
-  set "PART=%%A"
-  REM Buscar el prefijo "name":" y extraer el siguiente token
-  for /f "tokens=2 delims=:" %%B in ("!PART!") do (
-    set "TAG_TMP=%%B" & set "TAG_TMP=!TAG_TMP:,=!" & set "TAG_TMP=!TAG_TMP:"=!"
-    set "LATEST_TAG=!TAG_TMP!"
-    goto :done
-        )
-)
-:done
+echo Ultimo tag: !LATEST_TAG!
 
 echo ==== Leyendo VERSION.txt ========================
 if not exist VERSION.txt (
