@@ -23,7 +23,7 @@ for /f %%A in ('
 
 if not defined LATEST_TAG (
   echo ERROR: No se pudo obtener el último tag desde GitHub.
-  goto :end
+  goto :ejecutar_app
 )
 
 echo Ultimo tag: !LATEST_TAG!
@@ -31,7 +31,7 @@ echo Ultimo tag: !LATEST_TAG!
 echo ==== Leyendo VERSION.txt ========================
 if not exist VERSION.txt (
     echo ERROR: Archivo VERSION.txt no encontrado.
-    goto ejecutar_actualizacion
+    goto :ejecutar_actualizacion
 )
 set /p "LOCAL_TAG=" < VERSION.txt
 
@@ -43,7 +43,7 @@ echo --------------------------------------------------------
 :: === Comparar versiones
 if "!LATEST_TAG!"=="!LOCAL_TAG!" (
     echo +++ Version local ya estaba actualizada.
-    goto ejecutar_app
+    goto :ejecutar_app
 )
 
 :ejecutar_actualizacion
@@ -51,7 +51,7 @@ if "!LATEST_TAG!"=="!LOCAL_TAG!" (
 echo ====== Verificando si existe repositorio Git ===================
 if not exist ".git" (
     echo ERROR: Carpeta .git no encontrada. Se omite la actualizacion.
-    goto ejecutar_app
+    goto :ejecutar_app
 )
 
 echo ====== Evitando que se actualize el commander =======================
@@ -61,7 +61,7 @@ echo ====== Buscando actualizaciones ================================
 git fetch origin main
 if %ERRORLEVEL% EQU 1 (
     echo ADVERTENCIA: Fallo en git fetch. Se omite la actualizacion.
-    goto ejecutar_app
+    goto :ejecutar_app
 )
 
 echo ====== Archivos que se actualizan ==============================
