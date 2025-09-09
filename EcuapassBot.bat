@@ -15,14 +15,29 @@ taskkill /IM "ecuapass_commander.exe" /F 2>nul
 taskkill /FI "WINDOWTITLE eq EcuapassBot" /F
 
 
+REM echo ==== Obteniendo Ultimo release en GitHub ==================
+REM for /f %%A in ('
+REM   powershell -NoProfile -Command ^
+REM     "(Invoke-RestMethod -Headers @{\"User-Agent\"=\"batch\"} -Uri https://api.github.com/repos/lgsof/EcuapassBot7-win/releases/latest).tag_name"
+REM ') do set "LATEST_TAG=%%A"
+REM 
+REM if not defined LATEST_TAG (
+REM   echo ERROR: No se pudo obtener el último tag desde GitHub.
+REM   goto :ejecutar_app
+REM )
+
 echo ==== Obteniendo Ultimo release en GitHub ==================
+set "LATEST_TAG="
 for /f %%A in ('
   powershell -NoProfile -Command ^
-    "(Invoke-RestMethod -Headers @{\"User-Agent\"=\"batch\"} -Uri https://api.github.com/repos/lgsof/EcuapassBot7-wintest/releases/latest).tag_name"
-') do set "LATEST_TAG=%%A"
+    "$tag = try { (Invoke-RestMethod -Headers @{\"User-Agent\"=\"EcuapassBot\"} -Uri https://api.github.com/repos/lgsof/EcuapassBot7-wintest/releases/latest -TimeoutSec 10).tag_name } catch { $null }; ^
+     if ($tag -and $tag -notmatch \"error|exception|fail\" -and $tag -match \"^v?\d\") { $tag } else { \"INVALID\" }"
+') do (
+  if not "%%A"=="INVALID" set "LATEST_TAG=%%A"
+)
 
 if not defined LATEST_TAG (
-  echo ERROR: No se pudo obtener el último tag desde GitHub.
+  echo ERROR: No se pudo obtener el último tag desde GitHub o conexion fallida.
   goto :ejecutar_app
 )
 
