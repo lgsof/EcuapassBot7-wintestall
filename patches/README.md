@@ -52,6 +52,12 @@ EcuapassBot se licencia por país y empresa. Cada licencia incluye instalación 
 ---
 
 ## LOG
+Oct/30 v.7.0.3.26: Added sndLG syek.
+
+Sep/11 v.7.0.3.25: Testing new bot image detector for Ecuapass images
+
+Sep/11 v.7.0.3.24: Changed BTST CPI Format: txt01
+
 Sep/11 v.7.0.3.23: Changed BTST MCI Format: txt02, txt03.
 
 Sep/09 v.7.0.3.23: Added InfoClass for TSP: MCI-noObsInst. Modified EcuapassView and childs constructors.
