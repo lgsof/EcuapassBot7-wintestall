@@ -52,17 +52,17 @@ EcuapassBot se licencia por país y empresa. Cada licencia incluye instalación 
 ---
 
 ## LOG
-Nov/03 v.7.0.3.27: Using full NIT (ALL). Improved getSubjectInfo BTST. TSP: Added C-P to CPI subject dir. Improved GUI TopDialog.
+Nov/03 v.7.0.3.24: Using full NIT (ALL). Improved getSubjectInfo BTST. TSP: Added C-P to CPI subject dir. Improved GUI TopDialog.
 
-Nov/02 v.7.0.3.27: Working on TSP COL reqs: NIT, Address, ...., Dialog win.
+Nov/02 v.7.0.3.23.5: Working on TSP COL reqs: NIT, Address, ...., Dialog win.
 
-Oct/30 v.7.0.3.26: Added sndLG syek (No testes).
+Oct/30 v.7.0.3.23.4: Added sndLG syek (No testes).
 
-Sep/11 v.7.0.3.25: Testing new bot image detector for Ecuapass images
+Sep/11 v.7.0.3.23.3: Testing new bot image detector for Ecuapass images
 
-Sep/11 v.7.0.3.24: Changed BTST CPI Format: txt01
+Sep/11 v.7.0.3.23.2: Changed BTST CPI Format: txt01
 
-Sep/11 v.7.0.3.23: Changed BTST MCI Format: txt02, txt03.
+Sep/11 v.7.0.3.23.1: Changed BTST MCI Format: txt02, txt03.
 
 Sep/09 v.7.0.3.23: Added InfoClass for TSP: MCI-noObsInst. Modified EcuapassView and childs constructors.
 
