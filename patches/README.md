@@ -52,7 +52,8 @@ EcuapassBot se licencia por país y empresa. Cada licencia incluye instalación 
 ---
 
 ## LOG
-Nov/03 v.7.0.3.24: Using full NIT (ALL). Improved getSubjectInfo BTST. TSP: Added C-P to CPI subject dir. Improved GUI TopDialog.
+Nov/03 v.7.0.3.24: Full NIT. Improved getSubjectInfo BTST. Added C-P to CPI subject dir. 
+                   Improved GUI TopDialog.
 
 Nov/02 v.7.0.3.23.5: Working on TSP COL reqs: NIT, Address, ...., Dialog win.
 
