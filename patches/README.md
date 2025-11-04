@@ -52,7 +52,11 @@ EcuapassBot se licencia por país y empresa. Cada licencia incluye instalación 
 ---
 
 ## LOG
-Oct/30 v.7.0.3.26: Added sndLG syek.
+Nov/03 v.7.0.3.27: Using full NIT (ALL). Improved getSubjectInfo BTST. TSP: Added C-P to CPI subject dir. Improved GUI TopDialog.
+
+Nov/02 v.7.0.3.27: Working on TSP COL reqs: NIT, Address, ...., Dialog win.
+
+Oct/30 v.7.0.3.26: Added sndLG syek (No testes).
 
 Sep/11 v.7.0.3.25: Testing new bot image detector for Ecuapass images
 
