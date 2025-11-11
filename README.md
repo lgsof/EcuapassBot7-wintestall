@@ -52,8 +52,10 @@ EcuapassBot se licencia por país y empresa. Cada licencia incluye instalación 
 ---
 
 ## LOG
-Nov/08 v7.0.3.24.4: DocRecord "-UPDATED" file.
+Nov/10 v7.0.3.24.6: Improved getSubject: REs in resdata. Improved city from mult sources.
 
+Nov/08 v7.0.3.24.5: Fixing Ciudad-Pais in CPI Inconterm
+Nov/08 v7.0.3.24.4: DocRecord "-UPDATED" file.
 Nov/08 v7.0.3.24.3: Improved GUI (flags colors). Improved warnings (no ERROR values).
 Nov/05 v7.0.3.24.2: Improved appLauncher. Using LOW warning. OTROS is LOW
 Nov/04 v7.0.3.24.1: Added EcuCloud sendFile (for binary files as settings.bin)
