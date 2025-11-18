@@ -52,6 +52,7 @@ EcuapassBot se licencia por país y empresa. Cada licencia incluye instalación 
 ---
 
 ## LOG
+Nov/18 v7.0.3.28.6: Improved getValueRE
 Nov/18 v7.0.3.28.5: SILOG Two Empresa Names
 
 Nov/18 v7.0.3.28.4: SILOG reqs: NIT, Contenerized, two MCIs.
