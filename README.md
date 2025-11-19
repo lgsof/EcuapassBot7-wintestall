@@ -52,6 +52,8 @@ EcuapassBot se licencia por país y empresa. Cada licencia incluye instalación 
 ---
 
 ## LOG
+Nov/19 v7.0.3.28.7: SILOG: update ciudad with capital if it is not in Ecuapass
+
 Nov/18 v7.0.3.28.6: Improved getValueRE
 Nov/18 v7.0.3.28.5: SILOG Two Empresa Names
 
