@@ -37,7 +37,7 @@
   },
   "Cauca": {
     "capital": "Popayan",
-    "ciudades": "Popayan, Santander de Quilichao, Puerto Tejada, Patia, Piendamo, Guapi, Caldono, Bolivar, Corinto, El Tambo, La Vega, Miranda, Paez, Suarez, Timbio, Totoro, Cajibio, Morales, Padilla, Guachene"
+    "ciudades": "Popayan, Santander de Quilichao, Puerto Tejada, Patia, Piendamo, Guapi, Caldono, Bolivar, Corinto, El Tambo, La Vega, Miranda, Paez, Suarez, Timbio, Totoro, Cajibio, Morales, Padilla"
   },
   "Cesar": {
     "capital": "Valledupar",
@@ -117,7 +117,7 @@
   },
   "Valle del Cauca": {
     "capital": "Cali",
-    "ciudades": "Cali, Buenaventura, Palmira, Buga, Tuluá, Cartago, Jamundi, Yumbo, Florida, Pradera, Zarzal, La Union, Caicedonia, El Cerrito, Roldanillo, Sevilla, Dagua, El Dovio, Guacari, San Pedro"
+    "ciudades": "Cali, Buenaventura, Palmira, Buga, Tuluá, Cartago, Jamundi, Yumbo, Florida, Pradera, Zarzal, La Union, Caicedonia, El Cerrito, Roldanillo, Sevilla, Dagua, El Dovio, Guacari, San Pedro, Guachene"
   },
   "Vaupes": {
     "capital": "Mitu",
