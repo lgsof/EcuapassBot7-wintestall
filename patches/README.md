@@ -52,6 +52,11 @@ EcuapassBot se licencia por país y empresa. Cada licencia incluye instalación 
 ---
 
 ## LOG
+Nov/26 v7.0.3.31.4: Associations + Capitals for Silog. Matching "weights"
+Nov/26 v7.0.3.31.3: GUI: Improving Associations. Improving SILOG
+Nov/25 v7.0.3.31.2: GUI: Testing AssociationsView
+Nov/21 v7.0.3.31.1: GUI: Creating "AssociationsView" to config ciudades, placas.
+
 Nov/20 v7.0.3.31.0: BTST: Fixed getPermisoOriginario.
 
 Nov/19 v7.0.3.30.0: SILOG: Modified coords. Added getBoxes to ScrapingPdf
