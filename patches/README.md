@@ -52,7 +52,10 @@ EcuapassBot se licencia por país y empresa. Cada licencia incluye instalación 
 ---
 
 ## LOG
-Nov/27 v7.0.3.32.0: SILOG reqs: MCI cantidad, embalaje, marcas (+/-). One CPI when two.
+Nov/27 v7.0.3.35.1: Testin bot improved: times, scroll (IA)
+
+Nov/27 v7.0.3.35.1: Improving bot (IA)
+Nov/27 v7.0.3.35.0: SILOG reqs: MCI cantidad, embalaje, marcas (+/-). One CPI when two.
 
 Nov/27 v7.0.3.31.5: Fixing SILOG reqs.
 Nov/26 v7.0.3.31.4: Associations + Capitals for Silog. Matching "weights"
