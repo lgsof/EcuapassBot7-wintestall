@@ -1,0 +1,444 @@
+{
+  "Amazonas": {
+    "capital": "Leticia",
+    "ciudades": [
+      "Puerto Nariño",
+      "Tarapacá",
+      "La Victoria",
+      "La Pedrera",
+      "El Encanto",
+      "Puerto Alegría",
+      "Araracuara",
+      "Mirití-Paraná",
+      "Puerto Santander"
+    ]
+  },
+  "Antioquia": {
+    "capital": "Medellín",
+    "ciudades": [
+      "Bello",
+      "Itagüí",
+      "Envigado",
+      "Rionegro",
+      "Apartadó",
+      "Turbo",
+      "Caucasia",
+      "La Ceja",
+      "Sabaneta"
+    ]
+  },
+  "Arauca": {
+    "capital": "Arauca",
+    "ciudades": [
+      "Saravena",
+      "Tame",
+      "Arauquita",
+      "Fortul",
+      "Cravo Norte",
+      "Puerto Rondón",
+      "La Esmeralda",
+      "Panamá de Arauca",
+      "Puerto Jordán"
+    ]
+  },
+  "Atlántico": {
+    "capital": "Barranquilla",
+    "ciudades": [
+      "Soledad",
+      "Malambo",
+      "Sabanalarga",
+      "Puerto Colombia",
+      "Galapa",
+      "Santo Tomás",
+      "Palmar de Varela",
+      "Baranoa",
+      "Ponedera"
+    ]
+  },
+  "Bogotá D.C.": {
+    "capital": "Bogotá",
+    "ciudades": []
+  },
+  "Bolívar": {
+    "capital": "Cartagena",
+    "ciudades": [
+      "Magangué",
+      "Turbaco",
+      "Arjona",
+      "El Carmen de Bolívar",
+      "Mompox",
+      "San Juan Nepomuceno",
+      "San Estanislao",
+      "Villanueva"
+    ]
+  },
+  "Boyacá": {
+    "capital": "Tunja",
+    "ciudades": [
+      "Duitama",
+      "Sogamoso",
+      "Chiquinquirá",
+      "Paipa",
+      "Samacá",
+      "Nobsa",
+      "Puerto Boyacá",
+      "Moniquirá",
+      "Villa de Leyva"
+    ]
+  },
+  "Caldas": {
+    "capital": "Manizales",
+    "ciudades": [
+      "Villamaría",
+      "La Dorada",
+      "Chinchiná",
+      "Riosucio",
+      "Anserma",
+      "Supía",
+      "Aguadas",
+      "Filadelfia",
+      "Marmato"
+    ]
+  },
+  "Caquetá": {
+    "capital": "Florencia",
+    "ciudades": [
+      "San Vicente del Caguán",
+      "Puerto Rico",
+      "Cartagena del Chairá",
+      "El Doncello",
+      "La Montañita",
+      "El Paujil",
+      "Solano",
+      "Solita",
+      "Albania"
+    ]
+  },
+  "Casanare": {
+    "capital": "Yopal",
+    "ciudades": [
+      "Villanueva",
+      "Aguazul",
+      "Tauramena",
+      "Paz de Ariporo",
+      "Maní",
+      "Monterrey",
+      "Orocué",
+      "Trinidad",
+      "Hato Corozal"
+    ]
+  },
+  "Cauca": {
+    "capital": "Popayán",
+    "ciudades": [
+      "Santander de Quilichao",
+      "Puerto Tejada",
+      "Guachené",
+      "Patía (El Bordo)",
+      "Piendamó",
+      "Caloto",
+      "Morales",
+      "Timbío",
+      "El Tambo"
+    ]
+  },
+  "Cesar": {
+    "capital": "Valledupar",
+    "ciudades": [
+      "Aguachica",
+      "Bosconia",
+      "Curumaní",
+      "La Paz",
+      "Codazzi",
+      "Chiriguaná",
+      "La Jagua de Ibirico",
+      "San Alberto",
+      "El Copey"
+    ]
+  },
+  "Chocó": {
+    "capital": "Quibdó",
+    "ciudades": [
+      "Istmina",
+      "Tadó",
+      "Condoto",
+      "Bahía Solano",
+      "Juradó",
+      "Nuquí",
+      "Medio Atrato",
+      "Acandí",
+      "Sipí"
+    ]
+  },
+  "Córdoba": {
+    "capital": "Montería",
+    "ciudades": [
+      "Sahagún",
+      "Lorica",
+      "Montelíbano",
+      "Planeta Rica",
+      "Tierralta",
+      "Cereté",
+      "San Pelayo",
+      "Chinú",
+      "Puerto Libertador"
+    ]
+  },
+  "Cundinamarca": {
+    "capital": "Bogotá",
+    "ciudades": [
+      "Soacha",
+      "Zipaquirá",
+      "Facatativá",
+      "Chía",
+      "Fusagasugá",
+      "Girardot",
+      "Mosquera",
+      "Madrid",
+      "Cajicá"
+    ]
+  },
+  "Guainía": {
+    "capital": "Inírida",
+    "ciudades": [
+      "Barrancominas",
+      "Mapiripana",
+      "San Felipe",
+      "Puerto Colombia",
+      "Cacahual",
+      "La Guadalupe",
+      "Pana Pana",
+      "Morichal"
+    ]
+  },
+  "Guaviare": {
+    "capital": "San José del Guaviare",
+    "ciudades": [
+      "El Retorno",
+      "Calamar",
+      "Miraflores",
+      "Capricho",
+      "La Libertad",
+      "Tomachipán",
+      "Charras",
+      "Agua Bonita"
+    ]
+  },
+  "Huila": {
+    "capital": "Neiva",
+    "ciudades": [
+      "Pitalito",
+      "Garzón",
+      "La Plata",
+      "Campoalegre",
+      "Palermo",
+      "Gigante",
+      "San Agustín",
+      "Rivera",
+      "Algeciras"
+    ]
+  },
+  "La Guajira": {
+    "capital": "Riohacha",
+    "ciudades": [
+      "Maicao",
+      "Uribia",
+      "Villanueva",
+      "Fonseca",
+      "Albania",
+      "Manaure",
+      "San Juan del Cesar",
+      "Hatonuevo",
+      "Dibulla"
+    ]
+  },
+  "Magdalena": {
+    "capital": "Santa Marta",
+    "ciudades": [
+      "Ciénaga",
+      "Fundación",
+      "Aracataca",
+      "Plato",
+      "El Banco",
+      "Pivijay",
+      "Zona Bananera",
+      "Sabanas de San Ángel",
+      "Guamal"
+    ]
+  },
+  "Meta": {
+    "capital": "Villavicencio",
+    "ciudades": [
+      "Acacías",
+      "Granada",
+      "Puerto López",
+      "Cumaral",
+      "Restrepo",
+      "Puerto Gaitán",
+      "San Martín",
+      "Vista Hermosa",
+      "La Macarena"
+    ]
+  },
+  "Nariño": {
+    "capital": "Pasto",
+    "ciudades": [
+      "Tumaco",
+      "Ipiales",
+      "Túquerres",
+      "La Unión",
+      "Samaniego",
+      "El Tambo",
+      "Sandoná",
+      "Buesaco",
+      "Guachucal"
+    ]
+  },
+  "Norte de Santander": {
+    "capital": "Cúcuta",
+    "ciudades": [
+      "Ocaña",
+      "Villa del Rosario",
+      "Los Patios",
+      "Pamplona",
+      "Tibú",
+      "El Zulia",
+      "Ábrego",
+      "Sardinata",
+      "Chinácota"
+    ]
+  },
+  "Putumayo": {
+    "capital": "Mocoa",
+    "ciudades": [
+      "Puerto Asís",
+      "Villagarzón",
+      "Orito",
+      "La Hormiga (Valle del Guamuez)",
+      "Puerto Caicedo",
+      "San Miguel",
+      "Puerto Leguízamo",
+      "Santiago",
+      "Colón"
+    ]
+  },
+  "Quindío": {
+    "capital": "Armenia",
+    "ciudades": [
+      "Calarcá",
+      "Montenegro",
+      "La Tebaida",
+      "Quimbaya",
+      "Circasia",
+      "Salento",
+      "Filandia",
+      "Buenavista",
+      "Génova"
+    ]
+  },
+  "Risaralda": {
+    "capital": "Pereira",
+    "ciudades": [
+      "Dosquebradas",
+      "Santa Rosa de Cabal",
+      "La Virginia",
+      "Marsella",
+      "Apía",
+      "Quinchía",
+      "Belén de Umbría",
+      "Santuario",
+      "Mistrató"
+    ]
+  },
+  "San Andrés y Providencia": {
+    "capital": "San Andrés",
+    "ciudades": [
+      "Providencia",
+      "Santa Catalina"
+    ]
+  },
+  "Santander": {
+    "capital": "Bucaramanga",
+    "ciudades": [
+      "Floridablanca",
+      "Girón",
+      "Piedecuesta",
+      "Barrancabermeja",
+      "San Gil",
+      "Socorro",
+      "Lebrija",
+      "Málaga",
+      "Cimitarra"
+    ]
+  },
+  "Sucre": {
+    "capital": "Sincelejo",
+    "ciudades": [
+      "Corozal",
+      "Sampués",
+      "Tolú",
+      "San Marcos",
+      "San Onofre",
+      "Coveñas",
+      "Galeras",
+      "Morroa",
+      "Toluviejo"
+    ]
+  },
+  "Tolima": {
+    "capital": "Ibagué",
+    "ciudades": [
+      "Espinal",
+      "Melgar",
+      "Honda",
+      "Chaparral",
+      "Lérida",
+      "Mariquita",
+      "Guamo",
+      "Fresno",
+      "Planadas"
+    ]
+  },
+  "Valle del Cauca": {
+    "capital": "Cali",
+    "ciudades": [
+      "Palmira",
+      "Buenaventura",
+      "Tuluá",
+      "Buga",
+      "Yumbo",
+      "Jamundí",
+      "Cartago",
+      "Zarzal",
+      "Florida"
+    ]
+  },
+  "Vaupés": {
+    "capital": "Mitú",
+    "ciudades": [
+      "Carurú",
+      "Taraira",
+      "Pacoa",
+      "Papunaua",
+      "Acaricuara",
+      "Yavaraté",
+      "Querarí",
+      "Monfort",
+      "Wacurabá"
+    ]
+  },
+  "Vichada": {
+    "capital": "Puerto Carreño",
+    "ciudades": [
+      "La Primavera",
+      "Santa Rosalía",
+      "Cumaribo",
+      "Guerima",
+      "Campo Alegre",
+      "Santa Rita",
+      "Santa Cecilia",
+      "Paujil",
+      "Puerto Príncipe"
+    ]
+  }
+}
