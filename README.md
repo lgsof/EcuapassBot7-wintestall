@@ -52,8 +52,9 @@ EcuapassBot se licencia por país y empresa. Cada licencia incluye instalación 
 ---
 
 ## LOG
-Nov/27 v7.0.3.35.1: Testing bot improved: times, scroll (IA)
+Dic/05 v7.0.3.35.3: Created Numbers package. Improved pesos values.
 
+Nov/27 v7.0.3.35.2: Testing bot improved: times, scroll (IA)
 Nov/27 v7.0.3.35.1: Improving bot (IA)
 Nov/27 v7.0.3.35.0: SILOG reqs: MCI cantidad, embalaje, marcas (+/-). One CPI when two.
 
