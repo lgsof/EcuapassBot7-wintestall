@@ -52,6 +52,8 @@ EcuapassBot se licencia por país y empresa. Cada licencia incluye instalación 
 ---
 
 ## LOG
+Dic/09 v7.0.3.35.7: Improved pesos check. Improved EcuCheck. Improved bot speed (~30s)
+
 Dic/07 v7.0.3.35.6: Pesos fixed. Improved EcuCheck. Improved bot speed (~30s)
 
 Dic/07 v7.0.3.35.4: Fixing MCI pesos.
