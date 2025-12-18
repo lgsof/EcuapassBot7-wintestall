@@ -52,7 +52,7 @@ EcuapassBot se licencia por país y empresa. Cada licencia incluye instalación 
 ---
 
 ## LOG
-Dic/18 v7.0.3.37.0: Added telemetry for SILOG.
+Dic/18 v7.0.3.37.1: Added telemetry for ALL.
 
 Dic/15 v7.0.3.36.0: Redesign for SILOG reqs. New Region class. Improved associations (city, mark).
 
