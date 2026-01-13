@@ -52,6 +52,8 @@ EcuapassBot se licencia por país y empresa. Cada licencia incluye instalación 
 ---
 
 ## LOG
+Jan/13 v7.0.3.40.4: Improved printException to local logs + csv cloud.
+
 Jan/12 v7.0.3.40.3: Tested new log model and EcuCloud.
 
 Jan/12 v7.0.3.40.2: Testing new log with telemetry. Testing refactored EcuCloud (Singleton).
