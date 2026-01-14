@@ -52,7 +52,7 @@ EcuapassBot se licencia por país y empresa. Cada licencia incluye instalación 
 ---
 
 ## LOG
-Jan/13 v7.0.3.40.5: In production: New EcuCloud, EcuLogs, EcuCheck, Telemetry. 
+Jan/13 v7.0.3.41.0: In production: New EcuCloud, EcuLogs, EcuCheck, Telemetry. 
 
 Jan/13 v7.0.3.40.4: Improved printException to local logs + csv cloud.
 Jan/12 v7.0.3.40.3: Tested new log model and EcuCloud.
