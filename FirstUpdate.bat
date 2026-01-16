@@ -1,3 +1,7 @@
+echo ==== Setting repo wintype: win or wintest ====
+set	GITREPO=wintest
+echo %GITREPO%
+
 @echo off
 setlocal
 
@@ -16,7 +20,7 @@ pushd "%~dp0"
 if not exist ".git" (
     echo Inicializando repositorio Git...
     "%GIT_CMD%" init
-    "%GIT_CMD%" remote add origin https://github.com/lgsof/EcuapassBot7-wintest.git
+    "%GIT_CMD%" remote add origin https://github.com/lgsof/EcuapassBot7-%GITREPO%.git
 )
 
 :: 4) Always pull the latest

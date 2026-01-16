@@ -52,6 +52,8 @@ EcuapassBot se licencia por país y empresa. Cada licencia incluye instalación 
 ---
 
 ## LOG
+Jan/13 v7.0.3.45.0: Improving installer. Minimal JRE. Improved starting bat files.
+
 Jan/13 v7.0.3.44.0: Fixed getEmpresaInfo (::).
 
 Jan/13 v7.0.3.41.0: In production: New EcuCloud, EcuLogs, EcuCheck, Telemetry. 
@@ -145,32 +147,18 @@ Aug/06: v.7.0.3.10: Renew-Settings for CBINI (TSP, LGT). Improved install: down,
 Aug/03: v.7.0.3.9: Improved Infos: extract, subject, cityCountry, container, id, certificates. InitPdf. GUI focus.
 
 Jul/29: v.7.0.3.7: Improved Installer (WApp). Checking Login. Improved createClient: added BTST 
-
 Jul/28: v.7.0.3.7: Improved getSubjectInfo. Moved GUI buttons
-
 Jul/25: v.7.0.3.4: Improving getSubjectInfo
-
 Jul/23: v.7.0.3.3: Improved GUI Top Bar: Icons Bot, Salir, Config, Whatsapp. Modified bat file.
-
 Jul/21: r0.9875: Codebini Install. Fixed Settings onTop: Frame instead Dialog. Splash window.
-
 Jul/20: r0.9875: Added VBS script to start with message. Modified GUI to start on top.
-
 Jul/19: r0.9874: Added configuration update from the application
-
 Jul/18: r0.9873: Improved getTipoEmbalaje, getTipoContainer, cloud creation.
-
 Jul/15: r0.9872: Fixed TRNSCMI carga. Added "preformatCertificate" to MCI (for TSP).
-
 Jul/12: r0.9871: Fixed COREDB Web access (urlPrefix, getDocFields)
-
 Jul/11: r0.9870: Improved Installation GUI (simply, tabs, PO validations). 
-
 Jul/10: r0.9870: Improved getCargaInfo.
-
 Jul/10: r0.9869: Tested new patching model (no commander exe). Improved contenedores extraction.
-
 Jul/10: r0.9868: Removed commander exe from git (created when patched)
-
 Jul/09: r0.9867: EcuBot7 for COREBD::TSP (Without customs, no full test)
 

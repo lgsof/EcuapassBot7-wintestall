@@ -1,1 +1,3 @@
-bin\jre-1.8\bin\java -jar "bin\EcuapassBotGUI.jar"
+bin\jre-ebot-win\bin\java.exe ^
+  -Djavax.accessibility.assistive_technologies= ^
+  -jar bin\EcuapassBotGUI.jar

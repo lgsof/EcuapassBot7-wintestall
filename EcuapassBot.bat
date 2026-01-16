@@ -1,3 +1,7 @@
+echo ==== Setting repo wintype: win or wintest ====
+set	GITREPO=wintest
+echo %GITREPO%
+
 @echo off
 setlocal EnableDelayedExpansion
 chcp 850 > nul
@@ -18,7 +22,7 @@ taskkill /FI "WINDOWTITLE eq EcuapassBot" /F
 echo ==== Obteniendo Ultimo release en GitHub ==================
 for /f %%A in ('
   powershell -NoProfile -Command ^
-    "(Invoke-RestMethod -Headers @{\"User-Agent\"=\"batch\"} -Uri https://api.github.com/repos/lgsof/EcuapassBot7-wintest/releases/latest).tag_name"
+    "(Invoke-RestMethod -Headers @{\"User-Agent\"=\"batch\"} -Uri https://api.github.com/repos/lgsof/EcuapassBot7-%GITREPO%/releases/latest).tag_name"
 ') do set "LATEST_TAG=%%A"
 
 if not defined LATEST_TAG (
@@ -86,5 +90,4 @@ if "%~1"=="debug" (
     set JAVA=java
 )
 
-start bin\jre-1.8\bin\%JAVA% -jar "bin\EcuapassBotGUI.jar"
-
+start bin\jre-ebot-win\bin\%JAVA% -Djavax.accessibility.assistive_technologies= -jar bin\EcuapassBotGUI.jar
