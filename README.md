@@ -52,14 +52,12 @@ EcuapassBot se licencia por país y empresa. Cada licencia incluye instalación 
 ---
 
 ## LOG
-Jan/16 v7.0.3.45.0: Improving installer. Minimal JRE. Improved starting bat files.
+Jan/16 v7.0.3.45.1: Improving installer. Minimal JRE. Improved starting bat files.
 
 Jan/13 v7.0.3.44.0: Fixed getEmpresaInfo (::).
-
 Jan/13 v7.0.3.41.0: In production: New EcuCloud, EcuLogs, EcuCheck, Telemetry. 
 Jan/13 v7.0.3.40.4: Improved printException to local logs + csv cloud.
 Jan/12 v7.0.3.40.3: Tested new log model and EcuCloud.
-
 Jan/12 v7.0.3.40.2: Testing new log with telemetry. Testing refactored EcuCloud (Singleton).
 Jan/11 v7.0.3.40.1: Testing new telemetry (ALL). Refactoring EcuCloud load once.
 Jan/09 v7.0.3.40.0: Removing telemetry (ALL). Refactor EcuCloud and spec file. Fixed BTST Marcas.
