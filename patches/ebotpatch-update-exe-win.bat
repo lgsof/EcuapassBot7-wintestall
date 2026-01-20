@@ -1,66 +1,82 @@
+REM ===============================================================
+REM Script for patching the original exe and create the new exe
+REM ===============================================================
+
 @echo off
-setlocal enabledelayedexpansion
+setlocal EnableExtensions EnableDelayedExpansion
 
-:: File paths
-set "LOG_FILE=patches.log"
-set "CURRENT_EXE=..\ecuapass_commander\ecuapass_commander.exe"Renew-Settings for CBINI (TSP, LGT). Improved install: down, exe, upd,run.
-set "ORIGINAL_EXE=..\ecuapass_commander\ecuapass_commander_original.exe"
-::set "NEW_EXE=..\ecuapass_commander\new_ecuapass_commander.exe"
+REM ===============================================================
+REM Paths
+set "BASE_DIR=%~dp0"
+set "LOG_FILE=%BASE_DIR%patches.log"
+set "ORIGINAL_EXE=%BASE_DIR%..\ecuapass_commander\ecuapass_commander_original.exe"
+set "CURRENT_EXE=%BASE_DIR%..\ecuapass_commander\ecuapass_commander.exe"
 
-cd /d "%~dp0"
+cd /d "%BASE_DIR%"
 
-REM =================================================================
-REM Check/Create log file 
+REM ===============================================================
+REM Ensure log exists
 if not exist "%LOG_FILE%" type nul > "%LOG_FILE%"
 
-REM Find the single patch file (e.g., patch_001.vcdiff)
+REM ===============================================================
+REM Find patch file (expect exactly one)
 set "PATCH_FILE="
-for /f "delims=" %%F in ('dir /b patch_*.vcdiff 2^>nul') do set "PATCH_FILE=%%F"
-
-if not defined PATCH_FILE (
-    echo !!! No patch file found. Expected patch_*.vcdiff.
-    goto end
+for %%F in (patch_*.vcdiff) do (
+    set "PATCH_FILE=%%F"
+    goto :found_patch
 )
 
-REM =================================================================
-REM Extract version using SPLIT (more reliable than string slicing)
-for /f "tokens=2 delims=_" %%V in ("%PATCH_FILE%") do (
-    for /f "tokens=1 delims=." %%N in ("%%V") do (
-        set "PATCH_VERSION=%%N"
-    )
+echo !!! ERROR: No patch file found (patch_*.vcdiff)
+goto :end
+
+:found_patch
+
+REM ===============================================================
+REM Extract patch version: patch_XXX.vcdiff → XXX
+for /f "tokens=2 delims=_" %%A in ("%PATCH_FILE%") do (
+    for /f "tokens=1 delims=." %%B in ("%%A") do set "PATCH_VERSION=%%B"
 )
 
 if not defined PATCH_VERSION (
-    echo !!! ERROR: Could not parse version from %PATCH_FILE%.
-    goto end
+    echo !!! ERROR: Cannot parse patch version from %PATCH_FILE%
+    goto :end
 )
 
-REM =================================================================
-REM Check if already applied
-findstr /C:"%PATCH_VERSION%" "%LOG_FILE%" >nul && (
-    echo --- Ultimo parche aplicado: %PATCH_VERSION%.
-    goto end
+REM ===============================================================
+REM Check if patch already applied
+findstr /x /c:"%PATCH_VERSION%" "%LOG_FILE%" >nul && (
+    echo --- Patch %PATCH_VERSION% already applied
+    goto :end
 )
 
-REM =================================================================
-REM Apply patch %PATCH_FILE%...
-xdelta3.exe -f -d -s "%ORIGINAL_EXE%" "%PATCH_FILE%" "%CURRENT_EXE%"
+REM ===============================================================
+REM Apply patch
+echo Applying patch %PATCH_VERSION%...
+xdelta3.exe -f -d ^
+    -s "%ORIGINAL_EXE%" ^
+    "%PATCH_FILE%" ^
+    "%CURRENT_EXE%"
 
-REM =================================================================
-REM Borrando parche y archivo actualizado
-::del "%CURRENT_EXE%" && (
-::    move "%NEW_EXE%" "%CURRENT_EXE%" >nul || (
-::        echo !!! ERROR: Failed to replace EXE. Restore from backup if needed.
-::        goto end
-::    )
-::)
-del %PATCH_FILE%
+if errorlevel 1 (
+    echo !!! ERROR: Patch failed
+    goto :end
+)
 
-REM =================================================================
-REM Prepend to log file (newest first)
-echo %PATCH_VERSION% > temp.log
-type "%LOG_FILE%" >> temp.log
-move /y temp.log "%LOG_FILE%" >nul
-echo +++ Parche %PATCH_VERSION% aplicado exitosamente.
+REM ===============================================================
+REM Cleanup
+del /q "%PATCH_FILE%"
+
+REM ===============================================================
+REM Update log (prepend newest)
+(
+    echo %PATCH_VERSION%
+    type "%LOG_FILE%"
+) > "%LOG_FILE%.tmp"
+
+move /y "%LOG_FILE%.tmp" "%LOG_FILE%" >nul
+
+echo +++ Patch %PATCH_VERSION% applied successfully
 
 :end
+endlocal
+
