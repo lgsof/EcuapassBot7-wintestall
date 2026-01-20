@@ -52,7 +52,7 @@ EcuapassBot se licencia por país y empresa. Cada licencia incluye instalación 
 ---
 
 ## LOG
-Jan/13 v7.0.3.45.0: Improving installer. Minimal JRE. Improved starting bat files.
+Jan/16 v7.0.3.45.1: Tested on wintest. Improving installer. Minimal JRE. Improved starting bat files.
 
 Jan/13 v7.0.3.44.0: Fixed getEmpresaInfo (::).
 
