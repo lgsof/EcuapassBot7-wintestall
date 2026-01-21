@@ -52,8 +52,9 @@ EcuapassBot se licencia por país y empresa. Cada licencia incluye instalación 
 ---
 
 ## LOG
-Jan/20 v7.0.3.45.3: Reducing .git
+Jan/21 v7.45.4: Testing reductions in win repo (.git cleaned one repo, jre min, pyr pruned)
 
+Jan/20 v7.0.3.45.3: Reducing .git
 Jan/19 v7.0.3.45.2: Reducing python runtime: modifies .SPEC
 Jan/16 v7.0.3.45.1: Tested on wintest. Improving installer. Minimal JRE. Improved starting bat files.
 
